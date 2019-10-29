@@ -24,6 +24,12 @@
 		EE1A2D8B23678BE200FFB2C8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D8323678BE200FFB2C8 /* API.swift */; };
 		EE1A2D8E23678C7F00FFB2C8 /* EventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D8D23678C7F00FFB2C8 /* EventRouter.swift */; };
 		EE1A2D922367923500FFB2C8 /* EventsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D912367923500FFB2C8 /* EventsStore.swift */; };
+		EEE1C3EA2368D17C0014F230 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE1C3E92368D17C0014F230 /* EventCell.swift */; };
+		EEE1C3EC2368D1AA0014F230 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE1C3EB2368D1AA0014F230 /* SearchTextField.swift */; };
+		EEE1C3EE2368D1C40014F230 /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE1C3ED2368D1C40014F230 /* EventDetail.swift */; };
+		EEE1C3F12368D1F40014F230 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE1C3F02368D1F40014F230 /* LocationService.swift */; };
+		EEE1C3F32368D2120014F230 /* YelpEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE1C3F22368D2120014F230 /* YelpEvent.swift */; };
+		EEE1C3F52368D2320014F230 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE1C3F42368D2320014F230 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,12 @@
 		EE1A2D8323678BE200FFB2C8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		EE1A2D8D23678C7F00FFB2C8 /* EventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRouter.swift; sourceTree = "<group>"; };
 		EE1A2D912367923500FFB2C8 /* EventsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsStore.swift; sourceTree = "<group>"; };
+		EEE1C3E92368D17C0014F230 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		EEE1C3EB2368D1AA0014F230 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		EEE1C3ED2368D1C40014F230 /* EventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetail.swift; sourceTree = "<group>"; };
+		EEE1C3F02368D1F40014F230 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		EEE1C3F22368D2120014F230 /* YelpEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpEvent.swift; sourceTree = "<group>"; };
+		EEE1C3F42368D2320014F230 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +113,9 @@
 			children = (
 				EE1A2D52236783F200FFB2C8 /* AppDelegate.swift */,
 				EE1A2D54236783F200FFB2C8 /* SceneDelegate.swift */,
-				EE1A2D56236783F200FFB2C8 /* ContentView.swift */,
-				EE1A2D77236786A200FFB2C8 /* Environment.swift */,
-				EE1A2D8D23678C7F00FFB2C8 /* EventRouter.swift */,
-				EE1A2D912367923500FFB2C8 /* EventsStore.swift */,
+				EEE1C3E82368D16F0014F230 /* UI */,
+				EEE1C3F62368D2640014F230 /* Data */,
+				EEE1C3EF2368D1EA0014F230 /* Services */,
 				EE1A2D58236783F300FFB2C8 /* Assets.xcassets */,
 				EE1A2D5D236783F300FFB2C8 /* LaunchScreen.storyboard */,
 				EE1A2D60236783F300FFB2C8 /* Info.plist */,
@@ -134,6 +145,8 @@
 		EE1A2D8C23678BEB00FFB2C8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				EE1A2D77236786A200FFB2C8 /* Environment.swift */,
+				EE1A2D8D23678C7F00FFB2C8 /* EventRouter.swift */,
 				EE1A2D8323678BE200FFB2C8 /* API.swift */,
 				EE1A2D8123678BE200FFB2C8 /* APIError.swift */,
 				EE1A2D8223678BE200FFB2C8 /* CurlExtensions.swift */,
@@ -143,6 +156,35 @@
 				EE1A2D7D23678BE200FFB2C8 /* URLRequestConvertible.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		EEE1C3E82368D16F0014F230 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EE1A2D56236783F200FFB2C8 /* ContentView.swift */,
+				EEE1C3E92368D17C0014F230 /* EventCell.swift */,
+				EEE1C3ED2368D1C40014F230 /* EventDetail.swift */,
+				EEE1C3EB2368D1AA0014F230 /* SearchTextField.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		EEE1C3EF2368D1EA0014F230 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EE1A2D912367923500FFB2C8 /* EventsStore.swift */,
+				EEE1C3F02368D1F40014F230 /* LocationService.swift */,
+				EEE1C3F42368D2320014F230 /* String+Extensions.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EEE1C3F62368D2640014F230 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EEE1C3F22368D2120014F230 /* YelpEvent.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,17 +293,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE1A2D8723678BE200FFB2C8 /* Router.swift in Sources */,
+				EEE1C3EE2368D1C40014F230 /* EventDetail.swift in Sources */,
 				EE1A2D53236783F200FFB2C8 /* AppDelegate.swift in Sources */,
 				EE1A2D8523678BE200FFB2C8 /* URLRequestConvertible.swift in Sources */,
 				EE1A2D8923678BE200FFB2C8 /* APIError.swift in Sources */,
 				EE1A2D922367923500FFB2C8 /* EventsStore.swift in Sources */,
+				EEE1C3EC2368D1AA0014F230 /* SearchTextField.swift in Sources */,
 				EE1A2D8623678BE200FFB2C8 /* HTTPMethod.swift in Sources */,
+				EEE1C3EA2368D17C0014F230 /* EventCell.swift in Sources */,
 				EE1A2D78236786A200FFB2C8 /* Environment.swift in Sources */,
 				EE1A2D8823678BE200FFB2C8 /* Network.swift in Sources */,
 				EE1A2D8E23678C7F00FFB2C8 /* EventRouter.swift in Sources */,
+				EEE1C3F32368D2120014F230 /* YelpEvent.swift in Sources */,
+				EEE1C3F52368D2320014F230 /* String+Extensions.swift in Sources */,
 				EE1A2D55236783F200FFB2C8 /* SceneDelegate.swift in Sources */,
 				EE1A2D8A23678BE200FFB2C8 /* CurlExtensions.swift in Sources */,
 				EE1A2D57236783F200FFB2C8 /* ContentView.swift in Sources */,
+				EEE1C3F12368D1F40014F230 /* LocationService.swift in Sources */,
 				EE1A2D8B23678BE200FFB2C8 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

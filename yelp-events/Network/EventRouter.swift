@@ -13,7 +13,7 @@ extension Router {
     enum Event: URLRequestConvertible {
         
         /// Fetches events
-        case getEvents(Decimal, Decimal, String?)
+        case getEvents(Coordinate?, String?)
         
         
         var method: HTTPMethod {
@@ -34,14 +34,15 @@ extension Router {
         func asURLRequest() throws -> URLRequest {
             var url = try path.asURL()
             switch self {
-            case let .getEvents(latitude, longitude, locationText):
+            case let .getEvents(coordinate, locationText):
                 var params = [String: Any]()
                 params["start_date"] = Int(Date().timeIntervalSince1970)
+                params["limit"] = 50
                 if let locationText = locationText {
                     params["location"] = locationText
-                } else {
-                    params["latitude"] = latitude
-                    params["longitude"] = longitude
+                } else if let coordinate = coordinate {
+                    params["latitude"] = coordinate.latitude
+                    params["longitude"] = coordinate.longitude
                 }
                 var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
                 var queryItems = [URLQueryItem]()

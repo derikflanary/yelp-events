@@ -37,7 +37,7 @@ class Network {
     
     /// Returns a Publisher with an optional value for the response type.
     /// Returns nil if there is an error
-    func requestOptional<T: Codable>(_ urlRequest: URLRequest, responseAs: T.Type) -> AnyPublisher<T?, Never> {
+    func requestIgnoringError<T: Codable>(_ urlRequest: URLRequest, responseAs: T.Type) -> AnyPublisher<T?, Never> {
         let request = adapt(urlRequest)
         
         return defaultSession.dataTaskPublisher(for: request)
@@ -45,7 +45,6 @@ class Network {
             .map { $0.data }
             .decode(type: T?.self, decoder: JSONDecoder())
             .replaceError(with: nil)
-            .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }
     
@@ -65,7 +64,6 @@ class Network {
                 return output.data
             }
             .decode(type: T.self, decoder: JSONDecoder())
-            .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }
                     

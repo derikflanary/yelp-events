@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE1A2D53236783F200FFB2C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D52236783F200FFB2C8 /* AppDelegate.swift */; };
+		EE1A2D55236783F200FFB2C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D54236783F200FFB2C8 /* SceneDelegate.swift */; };
+		EE1A2D57236783F200FFB2C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D56236783F200FFB2C8 /* ContentView.swift */; };
+		EE1A2D59236783F300FFB2C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1A2D58236783F300FFB2C8 /* Assets.xcassets */; };
+		EE1A2D5C236783F300FFB2C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1A2D5B236783F300FFB2C8 /* Preview Assets.xcassets */; };
+		EE1A2D5F236783F300FFB2C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1A2D5D236783F300FFB2C8 /* LaunchScreen.storyboard */; };
+		EE1A2D6A236783F300FFB2C8 /* yelp_eventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D69236783F300FFB2C8 /* yelp_eventsTests.swift */; };
+		EE1A2D78236786A200FFB2C8 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D77236786A200FFB2C8 /* Environment.swift */; };
+		EE1A2D8523678BE200FFB2C8 /* URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D7D23678BE200FFB2C8 /* URLRequestConvertible.swift */; };
+		EE1A2D8623678BE200FFB2C8 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D7E23678BE200FFB2C8 /* HTTPMethod.swift */; };
+		EE1A2D8723678BE200FFB2C8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D7F23678BE200FFB2C8 /* Router.swift */; };
+		EE1A2D8823678BE200FFB2C8 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D8023678BE200FFB2C8 /* Network.swift */; };
+		EE1A2D8923678BE200FFB2C8 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D8123678BE200FFB2C8 /* APIError.swift */; };
+		EE1A2D8A23678BE200FFB2C8 /* CurlExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D8223678BE200FFB2C8 /* CurlExtensions.swift */; };
+		EE1A2D8B23678BE200FFB2C8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D8323678BE200FFB2C8 /* API.swift */; };
+		EE1A2D8E23678C7F00FFB2C8 /* EventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D8D23678C7F00FFB2C8 /* EventRouter.swift */; };
+		EE1A2D922367923500FFB2C8 /* EventsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D912367923500FFB2C8 /* EventsStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE1A2D66236783F300FFB2C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE1A2D47236783F200FFB2C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE1A2D4E236783F200FFB2C8;
+			remoteInfo = "yelp-events";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE1A2D4F236783F200FFB2C8 /* yelp-events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yelp-events.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1A2D52236783F200FFB2C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE1A2D54236783F200FFB2C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EE1A2D56236783F200FFB2C8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EE1A2D58236783F300FFB2C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE1A2D5B236783F300FFB2C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EE1A2D5E236783F300FFB2C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE1A2D60236783F300FFB2C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE1A2D65236783F300FFB2C8 /* yelp-eventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "yelp-eventsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1A2D69236783F300FFB2C8 /* yelp_eventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yelp_eventsTests.swift; sourceTree = "<group>"; };
+		EE1A2D6B236783F300FFB2C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE1A2D77236786A200FFB2C8 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		EE1A2D7D23678BE200FFB2C8 /* URLRequestConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestConvertible.swift; sourceTree = "<group>"; };
+		EE1A2D7E23678BE200FFB2C8 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		EE1A2D7F23678BE200FFB2C8 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EE1A2D8023678BE200FFB2C8 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		EE1A2D8123678BE200FFB2C8 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		EE1A2D8223678BE200FFB2C8 /* CurlExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurlExtensions.swift; sourceTree = "<group>"; };
+		EE1A2D8323678BE200FFB2C8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		EE1A2D8D23678C7F00FFB2C8 /* EventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRouter.swift; sourceTree = "<group>"; };
+		EE1A2D912367923500FFB2C8 /* EventsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsStore.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE1A2D4C236783F200FFB2C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1A2D62236783F300FFB2C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE1A2D46236783F200FFB2C8 = {
+			isa = PBXGroup;
+			children = (
+				EE1A2D51236783F200FFB2C8 /* yelp-events */,
+				EE1A2D68236783F300FFB2C8 /* yelp-eventsTests */,
+				EE1A2D50236783F200FFB2C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE1A2D50236783F200FFB2C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE1A2D4F236783F200FFB2C8 /* yelp-events.app */,
+				EE1A2D65236783F300FFB2C8 /* yelp-eventsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE1A2D51236783F200FFB2C8 /* yelp-events */ = {
+			isa = PBXGroup;
+			children = (
+				EE1A2D52236783F200FFB2C8 /* AppDelegate.swift */,
+				EE1A2D54236783F200FFB2C8 /* SceneDelegate.swift */,
+				EE1A2D56236783F200FFB2C8 /* ContentView.swift */,
+				EE1A2D77236786A200FFB2C8 /* Environment.swift */,
+				EE1A2D8D23678C7F00FFB2C8 /* EventRouter.swift */,
+				EE1A2D912367923500FFB2C8 /* EventsStore.swift */,
+				EE1A2D58236783F300FFB2C8 /* Assets.xcassets */,
+				EE1A2D5D236783F300FFB2C8 /* LaunchScreen.storyboard */,
+				EE1A2D60236783F300FFB2C8 /* Info.plist */,
+				EE1A2D8C23678BEB00FFB2C8 /* Network */,
+				EE1A2D5A236783F300FFB2C8 /* Preview Content */,
+			);
+			path = "yelp-events";
+			sourceTree = "<group>";
+		};
+		EE1A2D5A236783F300FFB2C8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EE1A2D5B236783F300FFB2C8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EE1A2D68236783F300FFB2C8 /* yelp-eventsTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE1A2D69236783F300FFB2C8 /* yelp_eventsTests.swift */,
+				EE1A2D6B236783F300FFB2C8 /* Info.plist */,
+			);
+			path = "yelp-eventsTests";
+			sourceTree = "<group>";
+		};
+		EE1A2D8C23678BEB00FFB2C8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EE1A2D8323678BE200FFB2C8 /* API.swift */,
+				EE1A2D8123678BE200FFB2C8 /* APIError.swift */,
+				EE1A2D8223678BE200FFB2C8 /* CurlExtensions.swift */,
+				EE1A2D7E23678BE200FFB2C8 /* HTTPMethod.swift */,
+				EE1A2D8023678BE200FFB2C8 /* Network.swift */,
+				EE1A2D7F23678BE200FFB2C8 /* Router.swift */,
+				EE1A2D7D23678BE200FFB2C8 /* URLRequestConvertible.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE1A2D4E236783F200FFB2C8 /* yelp-events */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE1A2D6E236783F300FFB2C8 /* Build configuration list for PBXNativeTarget "yelp-events" */;
+			buildPhases = (
+				EE1A2D4B236783F200FFB2C8 /* Sources */,
+				EE1A2D4C236783F200FFB2C8 /* Frameworks */,
+				EE1A2D4D236783F200FFB2C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "yelp-events";
+			packageProductDependencies = (
+			);
+			productName = "yelp-events";
+			productReference = EE1A2D4F236783F200FFB2C8 /* yelp-events.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE1A2D64236783F300FFB2C8 /* yelp-eventsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE1A2D71236783F300FFB2C8 /* Build configuration list for PBXNativeTarget "yelp-eventsTests" */;
+			buildPhases = (
+				EE1A2D61236783F300FFB2C8 /* Sources */,
+				EE1A2D62236783F300FFB2C8 /* Frameworks */,
+				EE1A2D63236783F300FFB2C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE1A2D67236783F300FFB2C8 /* PBXTargetDependency */,
+			);
+			name = "yelp-eventsTests";
+			productName = "yelp-eventsTests";
+			productReference = EE1A2D65236783F300FFB2C8 /* yelp-eventsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE1A2D47236783F200FFB2C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Derik Flanary";
+				TargetAttributes = {
+					EE1A2D4E236783F200FFB2C8 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					EE1A2D64236783F300FFB2C8 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = EE1A2D4E236783F200FFB2C8;
+					};
+				};
+			};
+			buildConfigurationList = EE1A2D4A236783F200FFB2C8 /* Build configuration list for PBXProject "yelp-events" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE1A2D46236783F200FFB2C8;
+			packageReferences = (
+			);
+			productRefGroup = EE1A2D50236783F200FFB2C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE1A2D4E236783F200FFB2C8 /* yelp-events */,
+				EE1A2D64236783F300FFB2C8 /* yelp-eventsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE1A2D4D236783F200FFB2C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1A2D5F236783F300FFB2C8 /* LaunchScreen.storyboard in Resources */,
+				EE1A2D5C236783F300FFB2C8 /* Preview Assets.xcassets in Resources */,
+				EE1A2D59236783F300FFB2C8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1A2D63236783F300FFB2C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE1A2D4B236783F200FFB2C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1A2D8723678BE200FFB2C8 /* Router.swift in Sources */,
+				EE1A2D53236783F200FFB2C8 /* AppDelegate.swift in Sources */,
+				EE1A2D8523678BE200FFB2C8 /* URLRequestConvertible.swift in Sources */,
+				EE1A2D8923678BE200FFB2C8 /* APIError.swift in Sources */,
+				EE1A2D922367923500FFB2C8 /* EventsStore.swift in Sources */,
+				EE1A2D8623678BE200FFB2C8 /* HTTPMethod.swift in Sources */,
+				EE1A2D78236786A200FFB2C8 /* Environment.swift in Sources */,
+				EE1A2D8823678BE200FFB2C8 /* Network.swift in Sources */,
+				EE1A2D8E23678C7F00FFB2C8 /* EventRouter.swift in Sources */,
+				EE1A2D55236783F200FFB2C8 /* SceneDelegate.swift in Sources */,
+				EE1A2D8A23678BE200FFB2C8 /* CurlExtensions.swift in Sources */,
+				EE1A2D57236783F200FFB2C8 /* ContentView.swift in Sources */,
+				EE1A2D8B23678BE200FFB2C8 /* API.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1A2D61236783F300FFB2C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1A2D6A236783F300FFB2C8 /* yelp_eventsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE1A2D67236783F300FFB2C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE1A2D4E236783F200FFB2C8 /* yelp-events */;
+			targetProxy = EE1A2D66236783F300FFB2C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE1A2D5D236783F300FFB2C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE1A2D5E236783F300FFB2C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE1A2D6C236783F300FFB2C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE1A2D6D236783F300FFB2C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE1A2D6F236783F300FFB2C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"yelp-events/Preview Content\"";
+				DEVELOPMENT_TEAM = 92H4P6C5WB;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "yelp-events/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.derikflanary.yelp-events";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE1A2D70236783F300FFB2C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"yelp-events/Preview Content\"";
+				DEVELOPMENT_TEAM = 92H4P6C5WB;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "yelp-events/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.derikflanary.yelp-events";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE1A2D72236783F300FFB2C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 92H4P6C5WB;
+				INFOPLIST_FILE = "yelp-eventsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.derikflanary.yelp-eventsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yelp-events.app/yelp-events";
+			};
+			name = Debug;
+		};
+		EE1A2D73236783F300FFB2C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 92H4P6C5WB;
+				INFOPLIST_FILE = "yelp-eventsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.derikflanary.yelp-eventsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yelp-events.app/yelp-events";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE1A2D4A236783F200FFB2C8 /* Build configuration list for PBXProject "yelp-events" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1A2D6C236783F300FFB2C8 /* Debug */,
+				EE1A2D6D236783F300FFB2C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE1A2D6E236783F300FFB2C8 /* Build configuration list for PBXNativeTarget "yelp-events" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1A2D6F236783F300FFB2C8 /* Debug */,
+				EE1A2D70236783F300FFB2C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE1A2D71236783F300FFB2C8 /* Build configuration list for PBXNativeTarget "yelp-eventsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1A2D72236783F300FFB2C8 /* Debug */,
+				EE1A2D73236783F300FFB2C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE1A2D47236783F200FFB2C8 /* Project object */;
+}

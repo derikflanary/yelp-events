@@ -176,8 +176,8 @@
 			children = (
 				EE1A2D912367923500FFB2C8 /* EventsStore.swift */,
 				EEE1C3F02368D1F40014F230 /* LocationService.swift */,
-				EEE1C3F42368D2320014F230 /* String+Extensions.swift */,
 				EEE8B5382369E1DB000FE858 /* ImageLoader.swift */,
+				EEE1C3F42368D2320014F230 /* String+Extensions.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";

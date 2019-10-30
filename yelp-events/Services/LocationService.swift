@@ -51,7 +51,7 @@ extension LocationService: CLLocationManagerDelegate {
     
 }
 
-struct Coordinate {
+struct Coordinate: Equatable {
     
     let latitude: Decimal
     let longitude: Decimal

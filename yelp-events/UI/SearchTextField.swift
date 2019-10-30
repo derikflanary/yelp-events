@@ -18,7 +18,7 @@ struct SearchTextField: View {
             TextField("City", text: $eventsStore.searchString)
                 .foregroundColor(.primary)
                 .padding()
-            if !eventsStore.searchString.isEmpty && !eventsStore.isSearching {
+            if !eventsStore.searchString.isEmpty {
                 Button(action: {
                     self.eventsStore.fetchEvents(filteredBy: self.eventsStore.searchString)
                 }) {

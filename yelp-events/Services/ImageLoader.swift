@@ -14,17 +14,18 @@ class ImageLoader: ObservableObject  {
     
     private var cancelable: AnyCancellable?
     
-    @Published var image: Image = Image("")
+    @Published var image: Image = Image("yelp")
     
     func load(_ url: URL) {
         let session = URLSession(configuration: URLSessionConfiguration.default)
         cancelable = session.dataTaskPublisher(for: url)
+            .retry(2)
             .map{ (data, response) -> Image? in
                 guard let uiimage = UIImage(data: data) else { return nil }
                 return Image(uiImage: uiimage)
             }
             .replaceError(with: nil)
-            .replaceNil(with: Image(systemName: ""))
+            .replaceNil(with: Image("yelp"))
             .receive(on: RunLoop.main)
             .assign(to: \.image, on: self)
     }

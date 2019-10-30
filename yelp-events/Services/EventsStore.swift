@@ -13,19 +13,28 @@ import EventKit
 class EventsStore: ObservableObject {
     
     private let ekEventStore = EKEventStore()
-    private var cancelableNetworkRequest: AnyCancellable?
+    private var cancelableRequests = Set<AnyCancellable>()
+    private let publisher = PassthroughSubject<(String?, Coordinate?), APIError>()
     
     @Published var events = [YelpEvent]()
     @Published var searchString: String = ""
     @Published var eventSavedToCalendar = false
     @Published var isSearching = false
     
-    
-    func fetchEvents(filteredBy locationText: String? = nil, coordinate: Coordinate? = nil) {
-        guard let request = Router.Event.getEvents(coordinate, locationText).urlRequest else { return }
-        isSearching = true
-        cancelableNetworkRequest?.cancel()
-        cancelableNetworkRequest = Network(environment: Environment()).request(request, responseAs: EventsResponse.self)
+    init() {
+        publisher
+            .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
+            .removeDuplicates(by: { first, second -> Bool in
+                let bool = first.0 == second.0 && first.1 == second.1
+                return bool
+            })
+            .tryMap{ (location, coordinate) -> URLRequest in
+                guard let request = Router.Event.getEvents(coordinate, location).urlRequest else { throw APIError.unsuccessfulRequest(nil) }
+                return request
+            }
+            .flatMap { request in
+                return Network(environment: Environment()).request(request, responseAs: EventsResponse.self)
+            }
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 self.isSearching = false
@@ -35,6 +44,12 @@ class EventsStore: ObservableObject {
                     return (firstDate as NSDate).earlierDate(secondDate) == firstDate
                 })
             })
+            .store(in: &cancelableRequests)
+    }
+    
+    func fetchEvents(filteredBy locationText: String? = nil, coordinate: Coordinate? = nil) {
+        isSearching = true
+        publisher.send((locationText, coordinate))
     }
     
     func insertEventIntoCalcendar(_ yelpEvent: YelpEvent) {
@@ -57,13 +72,12 @@ class EventsStore: ObservableObject {
         }
     }
     
-    func saveEvent(_ event: EKEvent) {
+    private func saveEvent(_ event: EKEvent) {
         do {
             try ekEventStore.save(event, span: .thisEvent)
             eventSavedToCalendar = true
         } catch {
             print(error)
-            print("failed to save event")
         }
     }
     

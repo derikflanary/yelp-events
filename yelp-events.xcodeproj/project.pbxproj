@@ -30,6 +30,7 @@
 		EEE1C3F12368D1F40014F230 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE1C3F02368D1F40014F230 /* LocationService.swift */; };
 		EEE1C3F32368D2120014F230 /* YelpEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE1C3F22368D2120014F230 /* YelpEvent.swift */; };
 		EEE1C3F52368D2320014F230 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE1C3F42368D2320014F230 /* String+Extensions.swift */; };
+		EEE8B5392369E1DB000FE858 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8B5382369E1DB000FE858 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		EEE1C3F02368D1F40014F230 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		EEE1C3F22368D2120014F230 /* YelpEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpEvent.swift; sourceTree = "<group>"; };
 		EEE1C3F42368D2320014F230 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		EEE8B5382369E1DB000FE858 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				EE1A2D912367923500FFB2C8 /* EventsStore.swift */,
 				EEE1C3F02368D1F40014F230 /* LocationService.swift */,
 				EEE1C3F42368D2320014F230 /* String+Extensions.swift */,
+				EEE8B5382369E1DB000FE858 /* ImageLoader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			files = (
 				EE1A2D8723678BE200FFB2C8 /* Router.swift in Sources */,
 				EEE1C3EE2368D1C40014F230 /* EventDetail.swift in Sources */,
+				EEE8B5392369E1DB000FE858 /* ImageLoader.swift in Sources */,
 				EE1A2D53236783F200FFB2C8 /* AppDelegate.swift in Sources */,
 				EE1A2D8523678BE200FFB2C8 /* URLRequestConvertible.swift in Sources */,
 				EE1A2D8923678BE200FFB2C8 /* APIError.swift in Sources */,

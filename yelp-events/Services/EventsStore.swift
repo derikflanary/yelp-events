@@ -14,7 +14,7 @@ class EventsStore: ObservableObject {
     
     private let ekEventStore = EKEventStore()
     private var cancelableRequests = Set<AnyCancellable>()
-    private let publisher = PassthroughSubject<(String?, Coordinate?), APIError>()
+    private let fetchEventsPublisher = PassthroughSubject<(String?, Coordinate?), APIError>()
     
     @Published var events = [YelpEvent]()
     @Published var searchString: String = ""
@@ -22,7 +22,7 @@ class EventsStore: ObservableObject {
     @Published var isSearching = false
     
     init() {
-        publisher
+        fetchEventsPublisher
             .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
             .removeDuplicates(by: { first, second -> Bool in
                 let bool = first.0 == second.0 && first.1 == second.1
@@ -49,7 +49,7 @@ class EventsStore: ObservableObject {
     
     func fetchEvents(filteredBy locationText: String? = nil, coordinate: Coordinate? = nil) {
         isSearching = true
-        publisher.send((locationText, coordinate))
+        fetchEventsPublisher.send((locationText, coordinate))
     }
     
     func insertEventIntoCalcendar(_ yelpEvent: YelpEvent) {

@@ -31,23 +31,3 @@ class ImageLoader: ObservableObject  {
     }
     
 }
-
-struct URLImage: View {
-    
-    let url: URL
-    
-    @ObservedObject var imageLoader = ImageLoader()
-    
-    init(url: URL) {
-        self.url = url
-    }
-    
-    var body: some View {
-        imageLoader.image
-            .resizable()
-            .onAppear {
-                self.imageLoader.load(self.url)
-            }
-    }
-    
-}

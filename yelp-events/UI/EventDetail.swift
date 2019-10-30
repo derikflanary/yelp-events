@@ -15,10 +15,11 @@ struct EventDetailView: View {
     @ObservedObject var eventsStore: EventsStore
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack {
             URLImage(url: URL(string: event.image_url)!)
                 .frame(maxHeight: 200)
-            VStack {
+                
+            VStack(alignment: .leading) {
                 Text(event.name)
                     .font(.title)
                     .lineLimit(4)

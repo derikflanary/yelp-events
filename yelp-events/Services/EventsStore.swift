@@ -30,6 +30,7 @@ class EventsStore: ObservableObject {
             })
             .tryMap{ (location, coordinate) -> URLRequest in
                 guard let request = Router.Event.getEvents(coordinate, location).urlRequest else { throw APIError.unsuccessfulRequest(nil) }
+                self.isSearching = true
                 return request
             }
             .flatMap { request in
@@ -38,7 +39,9 @@ class EventsStore: ObservableObject {
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 self.isSearching = false
+                print(completion)
             }, receiveValue: { eventsResponse in
+                self.isSearching = false
                 self.events = eventsResponse.events.sorted(by: { (firstEvent, secondEvent) -> Bool in
                     guard let firstDate = firstEvent.time_start.asDate(), let secondDate = secondEvent.time_start.asDate() else { return false }
                     return (firstDate as NSDate).earlierDate(secondDate) == firstDate
@@ -48,7 +51,6 @@ class EventsStore: ObservableObject {
     }
     
     func fetchEvents(filteredBy locationText: String? = nil, coordinate: Coordinate? = nil) {
-        isSearching = true
         fetchEventsPublisher.send((locationText, coordinate))
     }
     

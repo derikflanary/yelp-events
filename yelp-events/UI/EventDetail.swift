@@ -12,7 +12,7 @@ import SwiftUI
 struct EventDetailView: View {
     
     var event: YelpEvent
-    @ObservedObject var eventsStore: EventsStore
+    @ObservedObject var eventsStore: EventsService
     
     var body: some View {
         VStack {

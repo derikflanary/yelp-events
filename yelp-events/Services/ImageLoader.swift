@@ -12,20 +12,21 @@ import SwiftUI
 
 class ImageLoader: ObservableObject  {
     
+    static var placeholder: Image = Image("yelp")
     private var cancelable: AnyCancellable?
     
-    @Published var image: Image = Image("yelp")
+    @Published var image: Image = ImageLoader.placeholder
     
     func load(_ url: URL) {
         let session = URLSession(configuration: URLSessionConfiguration.default)
         cancelable = session.dataTaskPublisher(for: url)
-            .retry(2)
+            .retry(3)
             .map{ (data, response) -> Image? in
                 guard let uiimage = UIImage(data: data) else { return nil }
                 return Image(uiImage: uiimage)
             }
             .replaceError(with: nil)
-            .replaceNil(with: Image("yelp"))
+            .replaceNil(with: ImageLoader.placeholder)
             .receive(on: RunLoop.main)
             .assign(to: \.image, on: self)
     }

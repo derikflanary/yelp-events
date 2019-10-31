@@ -11,7 +11,7 @@ import SwiftUI
 
 struct SearchTextField: View {
     
-    @ObservedObject var eventsStore: EventsStore
+    @ObservedObject var eventsStore: EventsService
     
     var body: some View {
         VStack {

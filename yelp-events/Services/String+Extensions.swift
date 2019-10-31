@@ -20,8 +20,23 @@ extension String {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyy-MM-dd'T'HH:mm:ss-hh:mm"
         guard let date = formatter.date(from: self) else { return "Date not found"}
-        formatter.timeZone = TimeZone(identifier: "UTC")
-        formatter.dateFormat = "MMM d, h:mm a"
+        formatter.dateFormat = "MMM d, yyyy"
         return formatter.string(from: date)
     }
+    
+}
+
+
+extension Date {
+
+    func adding(months: Int) -> Date {
+        let calendar = Calendar(identifier: .gregorian)
+
+        var components = DateComponents()
+        components.calendar = calendar
+        components.month = months
+
+        return calendar.date(byAdding: components, to: self) ?? self
+    }
+
 }

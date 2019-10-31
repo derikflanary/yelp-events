@@ -22,3 +22,5 @@ protocol ProtectedAPIEnvironment: APIEnvironment {
 protocol MockAPIEnvironment: APIEnvironment {
     var protocolClass: AnyClass? { get }
 }
+
+typealias JSONObject = [String: Any]

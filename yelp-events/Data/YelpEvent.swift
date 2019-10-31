@@ -55,3 +55,9 @@ struct Location: Codable {
         return display_address.joined(separator: "\n")
     }
 }
+
+struct EventsResponse: Codable {
+    
+    var events: [YelpEvent]
+    
+}

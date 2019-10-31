@@ -11,10 +11,10 @@ import CoreLocation
 
 class LocationService: NSObject, ObservableObject {
     
-    var eventsStore: EventsStore?
+    var eventsStore: EventsService?
     let locationManager = CLLocationManager()
     
-    init(eventsStore: EventsStore) {
+    init(eventsStore: EventsService) {
         self.eventsStore = eventsStore
         super.init()
         locationManager.delegate = self

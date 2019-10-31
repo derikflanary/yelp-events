@@ -32,11 +32,11 @@ extension Router {
         
         
         func asURLRequest() throws -> URLRequest {
-            var url = try path.asURL()
+            let url = try path.asURL()
             switch self {
             case let .getEvents(coordinate, locationText):
-                var params = [String: Any]()
-                params["start_date"] = Int(Date().timeIntervalSince1970)
+                var params = JSONObject()
+                params["start_date"] = Int(Date().adding(months: -3).timeIntervalSince1970)
                 params["limit"] = 50
                 if let locationText = locationText {
                     params["location"] = locationText
@@ -44,18 +44,7 @@ extension Router {
                     params["latitude"] = coordinate.latitude
                     params["longitude"] = coordinate.longitude
                 }
-                var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
-                var queryItems = [URLQueryItem]()
-                for (name, value) in params {
-                    let queryItem = URLQueryItem(name: name, value: String(describing: value))
-                    queryItems.append(queryItem)
-                }
-               
-                components?.queryItems = queryItems
-                if let componentURL = components?.url {
-                    url = componentURL
-                }
-                var request = URLRequest(url: url)
+                var request = URLRequest(url: url.parameterEncoded(params) ?? url)
                 request.httpMethod = method.rawValue
                 return request
             }

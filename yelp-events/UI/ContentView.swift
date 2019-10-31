@@ -10,10 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @EnvironmentObject var eventsStore: EventsStore
+    @EnvironmentObject var eventsStore: EventsService
     @EnvironmentObject var locationService: LocationService
-    
-    @State private var searchString: String = ""
     
     var body: some View {
         NavigationView {
@@ -29,6 +27,7 @@ struct ContentView: View {
                 Spacer()
                 Button(action: {
                     self.locationService.findCurrentLocation()
+                    self.eventsStore.searchString = ""
                 }) {
                     Text("Use Current Location")
                         .padding()

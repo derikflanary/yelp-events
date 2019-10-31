@@ -10,7 +10,7 @@ import Foundation
 import Combine
 import EventKit
 
-class EventsStore: ObservableObject {
+class EventsService: ObservableObject {
     
     private let ekEventStore = EKEventStore()
     private var cancelableRequests = Set<AnyCancellable>()
@@ -34,7 +34,7 @@ class EventsStore: ObservableObject {
                 return request
             }
             .flatMap { request in
-                return Network(environment: Environment()).request(request, responseAs: EventsResponse.self)
+                return Network(environment: YelpEventsProtectedApiEnvironment()).request(request, responseAs: EventsResponse.self)
             }
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
@@ -42,7 +42,7 @@ class EventsStore: ObservableObject {
                 print(completion)
             }, receiveValue: { eventsResponse in
                 self.isSearching = false
-                self.events = eventsResponse.events.sorted(by: { (firstEvent, secondEvent) -> Bool in
+                self.events = eventsResponse.events.filter { $0.is_official }.sorted(by: { (firstEvent, secondEvent) -> Bool in
                     guard let firstDate = firstEvent.time_start.asDate(), let secondDate = secondEvent.time_start.asDate() else { return false }
                     return (firstDate as NSDate).earlierDate(secondDate) == firstDate
                 })
@@ -82,11 +82,5 @@ class EventsStore: ObservableObject {
             print(error)
         }
     }
-    
-}
-
-struct EventsResponse: Codable {
-    
-    var events: [YelpEvent]
     
 }

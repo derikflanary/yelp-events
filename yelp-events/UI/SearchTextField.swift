@@ -42,18 +42,3 @@ struct SearchTextField: View {
     }
     
 }
-
-
-struct ActivityIndicator: UIViewRepresentable {
-
-    func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView {
-        let activityIndicator = UIActivityIndicatorView(style: .medium)
-        activityIndicator.startAnimating()
-        return activityIndicator
-    }
-
-    func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<ActivityIndicator>) {
-        return
-    }
-    
-}

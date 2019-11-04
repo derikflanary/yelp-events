@@ -34,9 +34,16 @@ class Network {
         self.environment = environment
     }
     
-    
-    /// Returns a Publisher with an optional value for the response type.
-    /// Returns nil if there is an error
+    /// Perform a network request that will return a publisher that ignores the error and instead returns an optional value
+    ///
+    /// - Note: This will return `nil` if an error occurs either on the network request or on the decoding of the json data.
+    ///         This will retry the request at most 3 times if the network call fails.
+    ///
+    /// - Parameters:
+    ///   - T: The type of the object the decoder will decode the json into
+    ///   - urlRequest: The url request that contains the endpoint and httpMethod
+    ///
+    /// - Returns: A generic publisher with `Output` of T? and Never for the `Error`
     func requestIgnoringError<T: Codable>(_ urlRequest: URLRequest, responseAs: T.Type) -> AnyPublisher<T?, Never> {
         let request = adapt(urlRequest)
         
@@ -48,7 +55,16 @@ class Network {
             .eraseToAnyPublisher()
     }
     
-    /// Returns a Publisher with the Type or an APIError
+    /// Perform a network request that will return a publisher with the output of `T` or `Error`
+    ///
+    /// - Note: This will retry the request at most 3 times if the network call fails.
+    ///
+    /// - Parameters:
+    ///   - T: The type of the object the decoder will decode the json into
+    ///   - urlRequest: The url request that contains the endpoint and httpMethod
+    ///   - responseAs: Type of the Codable object that the publisher will return in its `Output`
+    ///
+    /// - Returns: A generic publisher with `Output` of T and `Error` of Error
     func request<T: Codable>(_ urlRequest: URLRequest, responseAs: T.Type) -> AnyPublisher<T, Error> {
         let request = adapt(urlRequest)
                 
@@ -68,7 +84,15 @@ class Network {
     }
                     
 
-    
+    /// Convert a URLResponse and data into an `APIError`
+    ///
+    /// - Note: Will return an `APIError` based on the statusCode of the URLResponse
+    ///
+    /// - Parameters:
+    ///   - response: The `URLResponse` returned from the network call/dataTaskPublisher
+    ///   - data: The `Data` returned from the network request.
+    ///
+    /// - Returns: An `APIError` or nil on a successful request
     private func error(for response: URLResponse?, data: Data) -> APIError? {
         guard let response = response as? HTTPURLResponse else {
             return APIError.networkError(nil)
@@ -91,7 +115,7 @@ class Network {
 
 private extension Network {
     
-    
+    /// Adapts a URLRequest to include the `baseURL` from the environment and the correct `contentTypeHeader` for the `httpMethod`
     private func adapt(_ urlRequest: URLRequest) -> URLRequest {
         var request = urlRequest
         request.url = request.url?.based(at: environment?.baseURL)
@@ -108,6 +132,7 @@ private extension Network {
 
 extension URL {
     
+    /// Adds the baseURl to the endpoint URL
     func based(at base: URL?) -> URL? {
         guard let base = base else { return self }
         guard let baseComponents = URLComponents(string: base.absoluteString) else { return self }

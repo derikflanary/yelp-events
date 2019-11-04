@@ -44,7 +44,7 @@ extension Router {
                     params["latitude"] = coordinate.latitude
                     params["longitude"] = coordinate.longitude
                 }
-                var request = URLRequest(url: url.parameterEncoded(params) ?? url)
+                var request = URLRequest(url: url.parameterEncoded(with: params) ?? url)
                 request.httpMethod = method.rawValue
                 return request
             }

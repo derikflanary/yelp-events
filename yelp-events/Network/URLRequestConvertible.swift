@@ -81,7 +81,7 @@ extension URLComponents: URLConvertible {
 
 extension URL {
     
-    func parameterEncoded(_ jsonObject: JSONObject) -> URL? {
+    func parameterEncoded(with jsonObject: JSONObject) -> URL? {
         var components = URLComponents(url: self, resolvingAgainstBaseURL: true)
         var queryItems = [URLQueryItem]()
         for (name, value) in jsonObject {

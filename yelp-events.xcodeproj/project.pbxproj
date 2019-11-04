@@ -24,6 +24,7 @@
 		EE1A2D8B23678BE200FFB2C8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D8323678BE200FFB2C8 /* API.swift */; };
 		EE1A2D8E23678C7F00FFB2C8 /* EventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D8D23678C7F00FFB2C8 /* EventRouter.swift */; };
 		EE1A2D922367923500FFB2C8 /* EventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D912367923500FFB2C8 /* EventsService.swift */; };
+		EE1D99332370D7A50053C9E3 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D99322370D7A50053C9E3 /* ActivityIndicator.swift */; };
 		EEE1C3EA2368D17C0014F230 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE1C3E92368D17C0014F230 /* EventCell.swift */; };
 		EEE1C3EC2368D1AA0014F230 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE1C3EB2368D1AA0014F230 /* SearchTextField.swift */; };
 		EEE1C3EE2368D1C40014F230 /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE1C3ED2368D1C40014F230 /* EventDetail.swift */; };
@@ -66,6 +67,7 @@
 		EE1A2D8323678BE200FFB2C8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		EE1A2D8D23678C7F00FFB2C8 /* EventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRouter.swift; sourceTree = "<group>"; };
 		EE1A2D912367923500FFB2C8 /* EventsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsService.swift; sourceTree = "<group>"; };
+		EE1D99322370D7A50053C9E3 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		EEE1C3E92368D17C0014F230 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		EEE1C3EB2368D1AA0014F230 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		EEE1C3ED2368D1C40014F230 /* EventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetail.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				EEE1C3E92368D17C0014F230 /* EventCell.swift */,
 				EEE1C3ED2368D1C40014F230 /* EventDetail.swift */,
 				EEE1C3EB2368D1AA0014F230 /* SearchTextField.swift */,
+				EE1D99322370D7A50053C9E3 /* ActivityIndicator.swift */,
 				EEE8B53A236A3E11000FE858 /* URLImage.swift */,
 			);
 			path = UI;
@@ -314,6 +317,7 @@
 				EE1A2D8E23678C7F00FFB2C8 /* EventRouter.swift in Sources */,
 				EEE1C3F32368D2120014F230 /* YelpEvent.swift in Sources */,
 				EEE1C3F52368D2320014F230 /* String+Extensions.swift in Sources */,
+				EE1D99332370D7A50053C9E3 /* ActivityIndicator.swift in Sources */,
 				EE1A2D55236783F200FFB2C8 /* SceneDelegate.swift in Sources */,
 				EE1A2D8A23678BE200FFB2C8 /* CurlExtensions.swift in Sources */,
 				EE1A2D57236783F200FFB2C8 /* ContentView.swift in Sources */,

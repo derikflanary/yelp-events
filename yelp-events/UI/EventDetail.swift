@@ -33,8 +33,7 @@ struct EventDetailView: View {
                     .font(.body)
                 
                 Button(action: {
-                    let path = "http://maps.apple.com/?address=" + self.event.location.addressString.replacingOccurrences(of: "\n", with: ",").replacingOccurrences(of: " ", with: "+")
-                    guard let url = URL(string: path) else { return }
+                    guard let url = LocationService.mapURL(with: self.event.location.addressString) else { return }
                     UIApplication.shared.open(url)
                 }) {
                     HStack {
@@ -49,30 +48,7 @@ struct EventDetailView: View {
                 .padding()
                 
                 Spacer()
-                
-                HStack(spacing: 20) {
-                    Button(action: {
-                        guard let url = URL(string: self.event.event_site_url) else { return }
-                        UIApplication.shared.open(url)
-                    }) {
-                        Text("View on Yelp")
-                            .padding()
-                            .foregroundColor(.white)
-                            .background(LinearGradient(gradient: Gradient(colors: [.red, .purple]), startPoint: .leading, endPoint: .trailing))
-                            .cornerRadius(40)
-                    }
-                    Button(action: {
-                        self.eventsStore.insertEventIntoCalcendar(self.event)
-                    }) {
-                        Text("Add to Calendar")
-                            .padding()
-                            .foregroundColor(.white)
-                            .background(LinearGradient(gradient: Gradient(colors: [.purple, .red]), startPoint: .leading, endPoint: .trailing))
-                            .cornerRadius(40)
-                    }.alert(isPresented: self.$eventsStore.eventSavedToCalendar) {
-                        Alert(title: Text("Event added to calendar"), message: nil, dismissButton: .default(Text("Got it!")))
-                    }
-                }
+                EventActionButtonsStack(event: event, eventsStore: eventsStore)
             }
             .padding()
         }
@@ -83,3 +59,36 @@ struct EventDetailView: View {
     
 }
 
+
+struct EventActionButtonsStack: View {
+    
+    var event: YelpEvent
+    @ObservedObject var eventsStore: EventsService
+    
+    var body: some View {
+        HStack(spacing: 20) {
+            Button(action: {
+                guard let url = URL(string: self.event.event_site_url) else { return }
+                UIApplication.shared.open(url)
+            }) {
+                Text("View on Yelp")
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(LinearGradient(gradient: Gradient(colors: [.red, .purple]), startPoint: .leading, endPoint: .trailing))
+                    .cornerRadius(40)
+            }
+            Button(action: {
+                self.eventsStore.insertEventIntoCalcendar(self.event)
+            }) {
+                Text("Add to Calendar")
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(LinearGradient(gradient: Gradient(colors: [.purple, .red]), startPoint: .leading, endPoint: .trailing))
+                    .cornerRadius(40)
+            }.alert(isPresented: self.$eventsStore.eventSavedToCalendar) {
+                Alert(title: Text("Event added to calendar"), message: nil, dismissButton: .default(Text("Got it!")))
+            }
+        }
+    }
+    
+}

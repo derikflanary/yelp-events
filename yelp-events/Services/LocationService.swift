@@ -11,6 +11,14 @@ import CoreLocation
 
 class LocationService: NSObject, ObservableObject {
     
+    private static var mapsURLString: String = "http://maps.apple.com/?address="
+    
+    static func mapURL(with address: String) -> URL? {
+        let path = LocationService.mapsURLString + address.replacingOccurrences(of: "\n", with: ",").replacingOccurrences(of: " ", with: "+")
+        return URL(string: path)
+    }
+
+
     var eventsStore: EventsService?
     let locationManager = CLLocationManager()
     
@@ -27,6 +35,7 @@ class LocationService: NSObject, ObservableObject {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
     }
+    
     
 }
 

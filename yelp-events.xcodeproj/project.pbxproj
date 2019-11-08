@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,16 +15,10 @@
 		EE1A2D5F236783F300FFB2C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1A2D5D236783F300FFB2C8 /* LaunchScreen.storyboard */; };
 		EE1A2D6A236783F300FFB2C8 /* yelp_eventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D69236783F300FFB2C8 /* yelp_eventsTests.swift */; };
 		EE1A2D78236786A200FFB2C8 /* YelpEventsProtectedApiEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D77236786A200FFB2C8 /* YelpEventsProtectedApiEnvironment.swift */; };
-		EE1A2D8523678BE200FFB2C8 /* URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D7D23678BE200FFB2C8 /* URLRequestConvertible.swift */; };
-		EE1A2D8623678BE200FFB2C8 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D7E23678BE200FFB2C8 /* HTTPMethod.swift */; };
-		EE1A2D8723678BE200FFB2C8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D7F23678BE200FFB2C8 /* Router.swift */; };
-		EE1A2D8823678BE200FFB2C8 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D8023678BE200FFB2C8 /* Network.swift */; };
-		EE1A2D8923678BE200FFB2C8 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D8123678BE200FFB2C8 /* APIError.swift */; };
-		EE1A2D8A23678BE200FFB2C8 /* CurlExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D8223678BE200FFB2C8 /* CurlExtensions.swift */; };
-		EE1A2D8B23678BE200FFB2C8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D8323678BE200FFB2C8 /* API.swift */; };
 		EE1A2D8E23678C7F00FFB2C8 /* EventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D8D23678C7F00FFB2C8 /* EventRouter.swift */; };
 		EE1A2D922367923500FFB2C8 /* EventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A2D912367923500FFB2C8 /* EventsService.swift */; };
 		EE1D99332370D7A50053C9E3 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D99322370D7A50053C9E3 /* ActivityIndicator.swift */; };
+		EE78C0862375F68700ABDA18 /* NetworkStackiOS in Frameworks */ = {isa = PBXBuildFile; productRef = EE78C0852375F68700ABDA18 /* NetworkStackiOS */; };
 		EEE1C3EA2368D17C0014F230 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE1C3E92368D17C0014F230 /* EventCell.swift */; };
 		EEE1C3EC2368D1AA0014F230 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE1C3EB2368D1AA0014F230 /* SearchTextField.swift */; };
 		EEE1C3EE2368D1C40014F230 /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE1C3ED2368D1C40014F230 /* EventDetail.swift */; };
@@ -58,13 +52,6 @@
 		EE1A2D69236783F300FFB2C8 /* yelp_eventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yelp_eventsTests.swift; sourceTree = "<group>"; };
 		EE1A2D6B236783F300FFB2C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE1A2D77236786A200FFB2C8 /* YelpEventsProtectedApiEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpEventsProtectedApiEnvironment.swift; sourceTree = "<group>"; };
-		EE1A2D7D23678BE200FFB2C8 /* URLRequestConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestConvertible.swift; sourceTree = "<group>"; };
-		EE1A2D7E23678BE200FFB2C8 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		EE1A2D7F23678BE200FFB2C8 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		EE1A2D8023678BE200FFB2C8 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		EE1A2D8123678BE200FFB2C8 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		EE1A2D8223678BE200FFB2C8 /* CurlExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurlExtensions.swift; sourceTree = "<group>"; };
-		EE1A2D8323678BE200FFB2C8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		EE1A2D8D23678C7F00FFB2C8 /* EventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRouter.swift; sourceTree = "<group>"; };
 		EE1A2D912367923500FFB2C8 /* EventsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsService.swift; sourceTree = "<group>"; };
 		EE1D99322370D7A50053C9E3 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -83,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE78C0862375F68700ABDA18 /* NetworkStackiOS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,13 +141,6 @@
 			children = (
 				EE1A2D77236786A200FFB2C8 /* YelpEventsProtectedApiEnvironment.swift */,
 				EE1A2D8D23678C7F00FFB2C8 /* EventRouter.swift */,
-				EE1A2D8323678BE200FFB2C8 /* API.swift */,
-				EE1A2D8123678BE200FFB2C8 /* APIError.swift */,
-				EE1A2D8223678BE200FFB2C8 /* CurlExtensions.swift */,
-				EE1A2D7E23678BE200FFB2C8 /* HTTPMethod.swift */,
-				EE1A2D8023678BE200FFB2C8 /* Network.swift */,
-				EE1A2D7F23678BE200FFB2C8 /* Router.swift */,
-				EE1A2D7D23678BE200FFB2C8 /* URLRequestConvertible.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -213,6 +194,7 @@
 			);
 			name = "yelp-events";
 			packageProductDependencies = (
+				EE78C0852375F68700ABDA18 /* NetworkStackiOS */,
 			);
 			productName = "yelp-events";
 			productReference = EE1A2D4F236783F200FFB2C8 /* yelp-events.app */;
@@ -265,6 +247,7 @@
 			);
 			mainGroup = EE1A2D46236783F200FFB2C8;
 			packageReferences = (
+				EE78C0842375F68700ABDA18 /* XCRemoteSwiftPackageReference "NetworkStackiOS" */,
 			);
 			productRefGroup = EE1A2D50236783F200FFB2C8 /* Products */;
 			projectDirPath = "";
@@ -301,28 +284,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE1A2D8723678BE200FFB2C8 /* Router.swift in Sources */,
 				EEE1C3EE2368D1C40014F230 /* EventDetail.swift in Sources */,
 				EEE8B5392369E1DB000FE858 /* ImageLoader.swift in Sources */,
 				EE1A2D53236783F200FFB2C8 /* AppDelegate.swift in Sources */,
-				EE1A2D8523678BE200FFB2C8 /* URLRequestConvertible.swift in Sources */,
-				EE1A2D8923678BE200FFB2C8 /* APIError.swift in Sources */,
 				EE1A2D922367923500FFB2C8 /* EventsService.swift in Sources */,
 				EEE8B53B236A3E11000FE858 /* URLImage.swift in Sources */,
 				EEE1C3EC2368D1AA0014F230 /* SearchTextField.swift in Sources */,
-				EE1A2D8623678BE200FFB2C8 /* HTTPMethod.swift in Sources */,
 				EEE1C3EA2368D17C0014F230 /* EventCell.swift in Sources */,
 				EE1A2D78236786A200FFB2C8 /* YelpEventsProtectedApiEnvironment.swift in Sources */,
-				EE1A2D8823678BE200FFB2C8 /* Network.swift in Sources */,
 				EE1A2D8E23678C7F00FFB2C8 /* EventRouter.swift in Sources */,
 				EEE1C3F32368D2120014F230 /* YelpEvent.swift in Sources */,
 				EEE1C3F52368D2320014F230 /* String+Extensions.swift in Sources */,
 				EE1D99332370D7A50053C9E3 /* ActivityIndicator.swift in Sources */,
 				EE1A2D55236783F200FFB2C8 /* SceneDelegate.swift in Sources */,
-				EE1A2D8A23678BE200FFB2C8 /* CurlExtensions.swift in Sources */,
 				EE1A2D57236783F200FFB2C8 /* ContentView.swift in Sources */,
 				EEE1C3F12368D1F40014F230 /* LocationService.swift in Sources */,
-				EE1A2D8B23678BE200FFB2C8 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +563,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EE78C0842375F68700ABDA18 /* XCRemoteSwiftPackageReference "NetworkStackiOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/derikflanary/NetworkStackiOS";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EE78C0852375F68700ABDA18 /* NetworkStackiOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE78C0842375F68700ABDA18 /* XCRemoteSwiftPackageReference "NetworkStackiOS" */;
+			productName = NetworkStackiOS;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EE1A2D47236783F200FFB2C8 /* Project object */;
 }

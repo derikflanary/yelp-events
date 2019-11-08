@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "NetworkStackiOS",
+        "repositoryURL": "https://github.com/derikflanary/NetworkStackiOS",
+        "state": {
+          "branch": "master",
+          "revision": "6745a543f8cedfe4f0c1eada284eada63e276bd7",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

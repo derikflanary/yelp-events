@@ -9,6 +9,7 @@
 import Foundation
 import Combine
 import EventKit
+import NetworkStackiOS
 
 class EventsService: ObservableObject {
     
@@ -23,7 +24,7 @@ class EventsService: ObservableObject {
     
     init() {
         fetchEventsPublisher
-            .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
+            .debounce(for: .milliseconds(500), scheduler: RunLoop.current)
             .removeDuplicates(by: { first, second -> Bool in
                 let bool = first.0 == second.0 && first.1 == second.1
                 return bool
